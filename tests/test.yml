@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  remote_user: root
+  roles:
+      - { role: ansible-ufw-allow-profile, ufw_name: nginx, ufw_ports: 80/tcp, ufw_description: Web server}
