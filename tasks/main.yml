@@ -1,0 +1,5 @@
+- name: Copy ufw firewall rules
+  template: src=ufw-allow.j2 dest=/etc/ufw/applications.d/{{ufw_name}}
+
+- name: Enable ufw firewall rule
+  ufw: rule=allow name={{ufw_name}}
